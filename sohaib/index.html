@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
+  <meta name="viewport" content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:200,300,300i,400,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- LeafLet -->
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <!-- LeafLet END -->
+  <link rel="stylesheet" href="design.compact.css">
+
+  <title>Mehjazi</title>
+</head>
+
+<body>
+    <header class="header">
+  <header id="x" class="header_">
+    <!-- <img src="/sohaib_website/img/logo.png" alt=""> -->
+    <h6>Mehjazi</h6>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Kontakt</a>
+        </li>
+        <li>
+          <a href="#">Arbeitsbereich</a>
+        </li>
+        <li>
+          <a href="#">Stellen</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="header-firma">
+    <h1>Sohaib</h1>
+  </div>
+  <section class="container">
+
+    <div class="side-menu" style="display:none">
+      <h2>Navigation</h2>
+    <ul class=".side-menu-bar">
+
+  <a href="#podcast">
+    <li>Podcast</li>
+  </a>
+  <a href="#history">
+    <li>History</li>
+  </a>
+  <a href="#contact">
+    <li>Contact</li>
+  </a>
+    </ul>
+    </div>
+
+    <div class="header-slogan">
+      <div class="top">
+        Herzlich willkommen,
+      </div>
+      <div class="bottom">
+        Was darf ich für Sie tun?!
+      </div>
+    </div>
+    <center class="slogan-button">
+      <button type="button" class="button" onclick="showMainMessage('#shortStory')" name="button">Erfahre mehr!</button>
+    </center>
+  </section>
+</header>
+    <div class="standorte">
+  <h2>Arbeitsbereich</h2>
+  <div class="mapRahmen">
+    <div id="map"></div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+var map = L.map('map').setView([54.228103, 10.06820], 11);
+
+      // add the OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      }).addTo(map);
+
+      // show the scale bar on the lower left corner
+      L.control.scale().addTo(map);
+
+      // show a marker on the map
+      // L.marker({lon: 54.228103, lat: 10.006820}).bindPopup('The center of the world').addTo(map);
+      var marker = L.marker([54.228103, 10.006820]).bindPopup('Name des Kunden').addTo(map);
+      var marker = L.marker([54.230103, 10.06820]).bindPopup('Name des Kunden').addTo(map);
+      var marker = L.marker([54.229103, 10.06820]).bindPopup('Name des Kunden').addTo(map);
+      var marker = L.marker([54.249103, 10.06880]).bindPopup('Name des Kunden').addTo(map);
+
+      var polygon = L.polygon([
+        [54.228103, 10.006820],
+        [54.230103, 10.06820],
+        [54.249103, 10.06880]
+      ]).addTo(map);
+    </script>
+    <div class="profil">
+  <center>
+    <h3>Sohaib</h3>
+    <figure class="">
+      <img class="profil_img" src="" alt="">
+    </figure>
+  </center>
+  <section class="container">
+    <div class="person">
+      <!-- bild -->
+      <!-- text -->
+      <div class="profil_wrapper">
+        <p>„Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco
+           laboris nisi ut aliquip ex ea commodo consequat.
+           Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.“</p>
+      </div>
+    </div>
+  </section>
+</div>
+    <div class="skills">
+  <section class="container">
+    <div class="row">
+      <div class="six columns">
+
+        <div class="skill_wrapper">
+          <div class="circle">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="skill-text">
+            <h3>Lorem Header</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="six columns">
+
+        <div class="skill_wrapper">
+          <div class="circle">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="skill-text">
+            <h3>Lorem Header</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+
+        <div class="skill_wrapper">
+          <div class="circle">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="skill-text">
+            <h3>Lorem Header</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="six columns">
+
+        <div class="skill_wrapper">
+          <div class="circle">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="skill-text">
+            <h3>Lorem Header</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+    <div class="arbeit">
+  <section class="container">
+    <div class="row">
+      <div class="six columns">
+        <div class="wrapper-arbeit">
+          <!-- erstes Bild ohne IMG! -->
+          <figure class="img"></figure>
+          <!-- darunter Text -->
+          <div class="arbeit-text-Wrapper">
+            <h2>vorbereitung</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="six columns">
+
+        <div class="wrapper-arbeit">
+          <!-- erstes Bild ohne IMG! -->
+          <figure class="img2"></figure>
+          <!-- darunter Text -->
+          <div class="arbeit-text-Wrapper">
+            <h2>vorbereitung</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <div class="wrapper-arbeit">
+          <!-- darunter Text -->
+          <div class="arbeit-text-Wrapper">
+            <h2>vorbereitung</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <!-- erstes Bild ohne IMG! -->
+          <figure class="img3"></figure>
+        </div>
+      </div>
+
+      <div class="six columns">
+
+        <div class="wrapper-arbeit">
+          <!-- darunter Text -->
+          <div class="arbeit-text-Wrapper">
+            <h2>vorbereitung</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <!-- erstes Bild ohne IMG! -->
+          <figure class="img4"></figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+    <div id="contact" class="contact">
+  <section class="container">
+    <div id="alert" class="alert">
+     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Danke für die Nachricht =)
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <div class="header-contact">
+          <h2>Sie wollen was schreiben?</h2>
+          <span class="subheader">Termin oder Kontakt?</span>
+        </div>
+        <div class="contact-details">
+          <p>
+            <i class="fab fa-whatsapp"></i>
+            +49 123 456799
+          </p>
+          <p>
+            <i class="far fa-envelope"></i>
+            test@gmx.de
+          </p>
+        </div>
+      </div>
+      <div class="six columns">
+        <form class="contact-form" action="form.php" method="post">
+          <!-- <select class="contact-select" name="betreff">
+            <option value="contact">contact</option>
+            <option value="feed-back">feed-back</option>
+            <option value="anfrage">anfrage</option>
+          </select> -->
+          <br />
+          <label for="name">name *</label>
+          <input id="name" type="text" name="name" value="" placeholder="name *" required="required">
+          <label for="email">email *</label>
+          <input id="email" type="text" name="email" value="" placeholder="ali@gmx.de *" required="required">
+          <label for="text">text *</label>
+          <textarea id="text" name="nachricht" rows="8" cols="40" placeholder="i am a believer *" required="required"></textarea>
+          <br />
+          <center>
+          <div class="form-group">
+            <div class="g-recaptcha" width="80%"
+            data-sitekey="6LdDZdQUAAAAAGan28ccIzRgTFTYwZcKga_GU_0O"
+            data-callback="recaptcha_callback"
+            ></div>
+          </div>
+        </center>
+          <br/>
+          <input id="submit" class="sumbit" onclick="sendForm()" type="button" name="" value="submit" disabled>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <hr/>
+      <p>
+        &copy; 2019 junge Übernehmer by Bayo/Omer &#183; made in Germany
+      </p>
+    </div>
+  </section>
+</div>
+
+</body>
+<script src="js/modernizr-custom.js" charset="utf-8"></script>
+<script src="js/app.js" charset="utf-8"></script>
+<script src="https://www.google.com/recaptcha/api.js"
+  async defer>
+</script>
+
+
+</html>
